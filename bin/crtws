@@ -1,0 +1,6 @@
+#!/usr/bin/env jruby
+#
+# crtws: Start a caTissue web service
+#
+
+require 'casmall'

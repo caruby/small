@@ -1,13 +1,13 @@
 require 'uri'
 require 'spec/spec_helper'
-require 'jinx/helpers/uniquifier'
+require 'jinx/helpers/uom'
 
 module CaSmall
   describe 'Find' do
     include RackTest
 
   	it "should find an existing Participant" do
-      pnt = CaTissue::Participant.new(:last_name => Jinx::Uniquifier.qualifier.to_s).create
+      pnt = CaTissue::Participant.new(:last_name => Jinx::UOM.generate.to_s).create
       get "/participant/#{pnt.id}"
       last_response.should be_ok
       fetched = JSON[last_response.body]

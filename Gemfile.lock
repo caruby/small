@@ -1,14 +1,4 @@
 PATH
-  remote: /Users/loneyf/workspace/caruby/core
-  specs:
-    caruby-core (2.1.3)
-      bundler
-      jinx (~> 2.1.1)
-      jinx-json (~> 2.1.1)
-      jinx-migrate (>= 2.1.1)
-      rdbi
-
-PATH
   remote: .
   specs:
     caruby-small (1.1.2)
@@ -18,6 +8,16 @@ PATH
       rack
       sinatra
       sinatra-authorization
+
+PATH
+  remote: /Users/loneyf/workspace/caruby/core
+  specs:
+    caruby-core (2.1.3)
+      bundler
+      jinx (~> 2.1.1)
+      jinx-json (~> 2.1.1)
+      jinx-migrate (>= 2.1.1)
+      rdbi
 
 PATH
   remote: /Users/loneyf/workspace/caruby/tissue

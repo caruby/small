@@ -9,6 +9,8 @@ ca<small>Small</small>: A caTissue web service and application micro-framework
 Synopsis
 --------
 caSmall is a framework for deploying a caTissue RESTful web service and custom web applications.
+This project features a web service. The companion [Scat](http://github.com/caruby/scat) project
+is a light-weight web application.
 
 Feature List
 ------------

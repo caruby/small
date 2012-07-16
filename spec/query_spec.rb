@@ -13,7 +13,7 @@ module CaSmall
       site.content_matches?(fetched.first).should be true
     end
 
-  	it 'should query a Site path' do
+  	it 'should query a Site -> coordinator path' do
       site = CaTissue::Site.default_site
       post '/query/coordinator', :json => site.to_json
       last_response.should be_ok

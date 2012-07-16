@@ -1,9 +1,13 @@
 require 'json'
-require 'catissue'
 
 module CaSmall
   # The WebService processes catissuews requests.
   class WebService
+    # @param [Module] mod the application domain module, e.g. +CaTissue+.
+    def initialize(mod)
+      @context = mod
+    end
+    
     # @param [String] name the search target class name, singular or plural
     # @param [{String=>String}] params the attribute => value search arguments
     # @return [String, nil] the JSON content of the matching object(s), or nil if no match
@@ -11,7 +15,7 @@ module CaSmall
       # the caTissue class to find
       tgt = name.singularize
       logger.info { "caSmall finding #{name.qp} #{params.qp}..." }
-      klass = CaTissue.const_get(tgt.camelize)
+      klass = @context.const_get(tgt.camelize)
       # the attribute => value hash
       vh = {}
       # Convert the parameters into attribute => value entries.
@@ -39,7 +43,8 @@ module CaSmall
     # @return [String, nil] the JSON content of the matching objects, or nil if no match
     def query(json, path=nil)
       path_a = path ? path.split('/').map { |s| s.to_sym } : Array::EMPTY_ARRAY
-      JSON[json].query(*path_a).to_json
+      # Bump the default nesting, since a query result can be deeply nested. 
+      JSON[json].query(*path_a).to_json(:max_nesting => 100)
     end
     
     # @param [String] json the JSON representation of the object to create

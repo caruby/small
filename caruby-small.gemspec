@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency     'sinatra'
   s.add_runtime_dependency     'sinatra-authorization'
   s.add_runtime_dependency     'jruby-openssl'
-  s.add_runtime_dependency     'caruby-tissue', '>= 2.1.4'
+  s.add_runtime_dependency     'caruby-tissue', '>= 2.1.5'
   s.add_development_dependency 'yard'
   s.add_development_dependency 'rake'
   s.has_rdoc      = 'yard'

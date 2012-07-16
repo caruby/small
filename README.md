@@ -1,6 +1,5 @@
-caSmall: A caTissue web service and application micro-framework
-===============================================================
-
+ca<small>Small</small>: A caTissue web service and application micro-framework
+==============================================================================
 **Home**:         [http://caruby.rubyforge.org/casmall.html](http://caruby.rubyforge.org/casmall.html)    
 **Git**:          [http://github.com/caruby/small](http://github.com/caruby/small)       
 **Author**:       OHSU Knight Cancer Institute    
@@ -9,12 +8,10 @@ caSmall: A caTissue web service and application micro-framework
 
 Synopsis
 --------
-
 caSmall is a framework for deploying a caTissue RESTful web service and custom web applications.
 
 Feature List
 ------------
-
 1. Search, create and update caTissue objects.
 
 2. Leverages the [caRuby](http://caruby.rubyforge.org) declarative API.
@@ -26,7 +23,6 @@ caSmall is installed on a server as a JRuby gem:
 
 Usage
 -----
-
 Examples:
 
 * Fetch the specimen with identifier 212:
@@ -49,7 +45,9 @@ Examples:
 
    PUT `myserver:9060/casmall/`
 
+The JSON payload is described in the Jinx [JSON](http://github.com/jinx/json) project.
+
 Copyright
 ---------
-
-caSmall &copy; 2012 by [Oregon Health & Science University](http://www.ohsu.edu/xd/health/services/cancer/index.cfm).
+caSmall &copy; 2012 by [Oregon Health & Science University](http://www.ohsu.edu/xd/health/services/cancer).
+caSmall is licensed under the MIT license. Please see the LICENSE and LEGAL files for more information. 

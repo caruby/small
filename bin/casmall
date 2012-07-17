@@ -1,0 +1,7 @@
+#!/usr/bin/env jruby
+#
+# casmall: Start a caTissue web service
+#
+
+require 'casmall'
+rackup --env production File.dirname(__FILE__) + '../config.ru'
